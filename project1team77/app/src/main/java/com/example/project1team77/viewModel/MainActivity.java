@@ -1,5 +1,6 @@
 package com.example.project1team77.viewModel;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.project1team77.R;
@@ -31,12 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.classScheduleRecycler);
 
-        setUpClassesModel();
-
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, classesModel);
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -50,16 +50,13 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        Intent newClassIntent = getIntent();
+        String name = newClassIntent.getStringExtra("name");
+        String time = newClassIntent.getStringExtra("time");
+        String professor = newClassIntent.getStringExtra("professor");
+
+        classesModel.add(new Classes(name, time, professor));
     }
 
-    private void setUpClassesModel() {
-        String[] classesModelClass = getResources().getStringArray(R.array.classes);
-        String[] classesModelProfessor = getResources().getStringArray(R.array.professor);
-        String[] classesModelTime = getResources().getStringArray(R.array.time);
-
-        for (int i = 0; i <= classesModelClass.length; i++) {
-            classesModel.add(new Classes(classesModelClass[i], classesModelProfessor[i],
-                    classesModelTime[i]));
-        }
-    }
 }
