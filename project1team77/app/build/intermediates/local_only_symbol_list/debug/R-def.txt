@@ -14,6 +14,7 @@ drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
+id add
 id classScheduleRecycler
 id classView
 id class_schedule
@@ -27,6 +28,7 @@ id navigation_home
 id navigation_notifications
 id professor
 id professorView
+id recycler_view
 id submit
 id text_dashboard
 id text_home

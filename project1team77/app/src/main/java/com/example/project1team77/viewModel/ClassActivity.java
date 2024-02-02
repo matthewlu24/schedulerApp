@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.project1team77.R;
 import com.example.project1team77.model.Classes;
-import com.example.project1team77.ui.RecyclerViewAdapter;
+import com.example.project1team77.RecyclerViewAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +34,6 @@ public class ClassActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
 
         binding = com.example.project1team77.databinding.ClassScheduleBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
