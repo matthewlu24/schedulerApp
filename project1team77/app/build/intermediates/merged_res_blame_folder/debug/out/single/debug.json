@@ -100,8 +100,12 @@
         "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.example.project1team77.app-merged_res-44:/layout_class_form_view.xml.flat",
-        "source": "com.example.project1team77.app-main-46:/layout/class_form_view.xml"
+        "merged": "com.example.project1team77.app-merged_res-44:/layout_class_schedule.xml.flat",
+        "source": "com.example.project1team77.app-main-46:/layout/class_schedule.xml"
+    },
+    {
+        "merged": "com.example.project1team77.app-merged_res-44:/navigation_mobile_navigation.xml.flat",
+        "source": "com.example.project1team77.app-main-46:/navigation/mobile_navigation.xml"
     },
     {
         "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-merged_res-44:/mipmap-mdpi_ic_launcher_round.webp.flat",

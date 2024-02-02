@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/class_schedule">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -22,4 +22,11 @@
         android:name="com.example.project1team77.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/class_schedule"
+        android:name="com.example.project1team77.ui.notifications.NotificationsFragment"
+        android:label="Class Schedule"
+        tools:layout="@layout/class_schedule" />
+
 </navigation>

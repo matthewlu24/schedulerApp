@@ -3242,6 +3242,7 @@ int id chronometer 0x7f080072
 int id circle_center 0x7f080073
 int id classScheduleRecycler 0x7f080074
 int id classView 0x7f080075
+int id class_schedule 0x7f080207
 int id clear_text 0x7f080076
 int id clip_horizontal 0x7f080077
 int id clip_vertical 0x7f080078

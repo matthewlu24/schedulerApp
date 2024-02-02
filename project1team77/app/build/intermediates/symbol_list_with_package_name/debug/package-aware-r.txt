@@ -3243,6 +3243,7 @@ id chronometer
 id circle_center
 id classScheduleRecycler
 id classView
+id class_schedule
 id clear_text
 id clip_horizontal
 id clip_vertical
