@@ -9,7 +9,15 @@
         android:id="@+id/navigation_home"
         android:name="com.example.project1team77.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_classFormView"
+            app:destination="@id/classFormView" />
+        <action
+            android:id="@+id/action_navigation_home_pop"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -31,6 +39,7 @@
     <activity
         android:id="@+id/classFormView"
         android:name="com.example.project1team77.ClassFormView"
-        android:label="ClassFormView" />
+        android:label="ClassFormView"
+        tools:layout="@layout/class_form_view"/>
 
 </navigation>

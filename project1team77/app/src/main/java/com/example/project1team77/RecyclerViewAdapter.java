@@ -1,5 +1,7 @@
 package com.example.project1team77;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

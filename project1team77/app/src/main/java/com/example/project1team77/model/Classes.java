@@ -5,7 +5,7 @@ public class Classes {
     String classes;
     String time;
 
-    public Classes(String professor, String classes, String time) {
+    public Classes(String classes, String time, String professor) {
         this.professor = professor;
         this.classes = classes;
         this.time = time;

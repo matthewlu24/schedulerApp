@@ -37,6 +37,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.project1team77.ClassFormView"
+            android:exported="true"
+            android:label="Class Form View" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

@@ -1,6 +1,7 @@
 package com.example.project1team77;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.project1team77.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerViewAdapter recyclerViewAdapter;
+    private FloatingActionButton add;
     ArrayList<Classes> classesModel = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,23 +43,17 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(recyclerViewAdapter);
 
-        FloatingActionButton add = findViewById(R.id.add);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        add = findViewById(R.id.add);
 
-                //startActivity(new Intent(getApplicationContext(), ClassFormView.class));
-//                Intent newClassIntent = getIntent();
-//                String name = newClassIntent.getStringExtra("name");
-//                String time = newClassIntent.getStringExtra("time");
-//                String professor = newClassIntent.getStringExtra("professor");
-//
-//                classesModel.add(new Classes(name, time, professor));
-//
-                classesModel.add(new Classes("CS2340", "12:30PM TUE THU", "Prof. Pedro"));
-                recyclerViewAdapter.notifyDataSetChanged();
-            }
-        });
+        Intent newClassIntent = getIntent();
+        if(newClassIntent != null){
+            String name = newClassIntent.getStringExtra("name");
+            String time = newClassIntent.getStringExtra("time");
+            String professor = newClassIntent.getStringExtra("professor");
+
+            classesModel.add(new Classes(name, time, professor));
+            recyclerViewAdapter.notifyDataSetChanged();
+        }
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -67,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+    }
+
+    public void goToForm(View v){
+        Intent intent = new Intent(MainActivity.this, ClassFormView.class);
+        startActivity(intent);
     }
 
 }

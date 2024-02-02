@@ -13,8 +13,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-62" />
-                            <option name="y" value="-31" />
+                            <option name="x" value="169" />
+                            <option name="y" value="23" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -52,6 +52,20 @@
                             <option name="x" value="12" />
                             <option name="y" value="12" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_navigation_home_to_classFormView">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_navigation_home_to_classFormView2">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
