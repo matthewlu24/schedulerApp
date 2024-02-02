@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.project1team77.R;
 import com.example.project1team77.model.Classes;
-import com.example.project1team77.ui.RecyclerViewAdapter;
+import com.example.project1team77.RecyclerViewAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,13 +16,11 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.project1team77.databinding.ActivityMainBinding;
-
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class ClassActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private com.example.project1team77.databinding.ClassScheduleBinding binding;
 
     ArrayList<Classes> classesModel = new ArrayList<>();
 
@@ -37,8 +35,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = com.example.project1team77.databinding.ClassScheduleBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);

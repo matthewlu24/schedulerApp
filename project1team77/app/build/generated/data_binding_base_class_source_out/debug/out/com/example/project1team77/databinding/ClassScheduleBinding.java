@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.project1team77.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,12 +21,21 @@ public final class ClassScheduleBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ConstraintLayout classSchedule;
+
+  @NonNull
   public final RecyclerView classScheduleRecycler;
 
+  @NonNull
+  public final BottomNavigationView navView;
+
   private ClassScheduleBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView classScheduleRecycler) {
+      @NonNull ConstraintLayout classSchedule, @NonNull RecyclerView classScheduleRecycler,
+      @NonNull BottomNavigationView navView) {
     this.rootView = rootView;
+    this.classSchedule = classSchedule;
     this.classScheduleRecycler = classScheduleRecycler;
+    this.navView = navView;
   }
 
   @Override
@@ -55,13 +65,22 @@ public final class ClassScheduleBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      ConstraintLayout classSchedule = (ConstraintLayout) rootView;
+
       id = R.id.classScheduleRecycler;
       RecyclerView classScheduleRecycler = ViewBindings.findChildViewById(rootView, id);
       if (classScheduleRecycler == null) {
         break missingId;
       }
 
-      return new ClassScheduleBinding((ConstraintLayout) rootView, classScheduleRecycler);
+      id = R.id.nav_view;
+      BottomNavigationView navView = ViewBindings.findChildViewById(rootView, id);
+      if (navView == null) {
+        break missingId;
+      }
+
+      return new ClassScheduleBinding((ConstraintLayout) rootView, classSchedule,
+          classScheduleRecycler, navView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

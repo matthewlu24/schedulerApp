@@ -3241,8 +3241,10 @@ id checkbox
 id checked
 id chronometer
 id circle_center
+id classFormView
 id classScheduleRecycler
 id classView
+id class_schedule
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3497,6 +3499,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycler_view
 id report_drawn
 id reverseSawtooth
 id right
