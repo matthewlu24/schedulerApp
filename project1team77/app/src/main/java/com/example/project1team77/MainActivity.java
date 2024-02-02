@@ -1,9 +1,9 @@
 package com.example.project1team77;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.project1team77.databinding.ClassScheduleBinding;
 import com.example.project1team77.model.Classes;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -44,7 +44,16 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                classesModel.add(new Classes("CS2340","12:30 PM TueThu","Prof. Pedro"));
+
+                //startActivity(new Intent(getApplicationContext(), ClassFormView.class));
+//                Intent newClassIntent = getIntent();
+//                String name = newClassIntent.getStringExtra("name");
+//                String time = newClassIntent.getStringExtra("time");
+//                String professor = newClassIntent.getStringExtra("professor");
+//
+//                classesModel.add(new Classes(name, time, professor));
+//
+                classesModel.add(new Classes("CS2340", "12:30PM TUE THU", "Prof. Pedro"));
                 recyclerViewAdapter.notifyDataSetChanged();
             }
         });

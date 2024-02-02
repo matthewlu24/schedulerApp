@@ -28,5 +28,9 @@
         android:name="com.example.project1team77.ui.notifications.NotificationsFragment"
         android:label="Class Schedule"
         tools:layout="@layout/class_schedule" />
+    <activity
+        android:id="@+id/classFormView"
+        android:name="com.example.project1team77.ClassFormView"
+        android:label="ClassFormView" />
 
 </navigation>

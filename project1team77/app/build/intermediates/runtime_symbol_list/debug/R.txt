@@ -3240,6 +3240,7 @@ int id checkbox 0x7f080070
 int id checked 0x7f080071
 int id chronometer 0x7f080072
 int id circle_center 0x7f080073
+int id classFormView 0x7f08020b
 int id classScheduleRecycler 0x7f080074
 int id classView 0x7f080075
 int id class_schedule 0x7f080207
