@@ -10,27 +10,29 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.project1team77.R;
 import com.example.project1team77.databinding.FragmentDashboardBinding;
+
+import java.util.ArrayList;
 
 public class AssignmentFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private AssignmentViewModel viewModel;
+    private ArrayList<Assignment> assignmentsList;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        AssignmentViewModel dashboardViewModel =
+        viewModel =
                 new ViewModelProvider(this).get(AssignmentViewModel.class);
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        assignmentsList = viewModel.getAssignmentList();
 
-        final TextView textView = binding.textDashboard;
-        return root;
+        return view;
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
     }
 }

@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import com.example.project1team77.R;
-import com.example.project1team77.databinding.ClassFormViewBinding;
 
 import java.util.ArrayList;
 
@@ -39,7 +38,7 @@ public class ClassFormView extends Fragment {
         submit = (Button) view.findViewById(R.id.submit);
 
         n = (EditText) view.findViewById(R.id.name);
-        t = (EditText) view.findViewById(R.id.time);
+        t = (EditText) view.findViewById(R.id.dueDate);
         p = (EditText) view.findViewById(R.id.professor);
 
         viewModel = new ViewModelProvider(getActivity()).get(ClassesViewModel.class);
