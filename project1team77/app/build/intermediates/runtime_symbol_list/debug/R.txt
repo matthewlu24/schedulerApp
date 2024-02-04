@@ -3034,9 +3034,11 @@ int drawable design_ic_visibility_off 0x7f070084
 int drawable design_password_eye 0x7f070085
 int drawable design_snackbar_background 0x7f070086
 int drawable ic_arrow_back_black_24 0x7f070087
+int drawable ic_baseline_delete_24 0x7f0700e2
 int drawable ic_clear_black_24 0x7f070088
 int drawable ic_clock_black_24dp 0x7f070089
 int drawable ic_dashboard_black_24dp 0x7f07008a
+int drawable ic_edit 0x7f0700e3
 int drawable ic_home_black_24dp 0x7f07008b
 int drawable ic_keyboard_black_24dp 0x7f07008c
 int drawable ic_launcher_background 0x7f07008d
@@ -3182,6 +3184,7 @@ int id action_bar_root 0x7f080036
 int id action_bar_spinner 0x7f080037
 int id action_bar_subtitle 0x7f080038
 int id action_bar_title 0x7f080039
+int id action_classFormView_to_navigation_home 0x7f08020f
 int id action_container 0x7f08003a
 int id action_context_bar 0x7f08003b
 int id action_divider 0x7f08003c
@@ -3191,6 +3194,7 @@ int id action_menu_presenter 0x7f08003f
 int id action_mode_bar 0x7f080040
 int id action_mode_bar_stub 0x7f080041
 int id action_mode_close_button 0x7f080042
+int id action_navigation_home_to_classFormView 0x7f08020c
 int id action_text 0x7f080043
 int id actions 0x7f080044
 int id activity_chooser_view_content 0x7f080045
@@ -3271,6 +3275,7 @@ int id decelerate 0x7f08008d
 int id decelerateAndComplete 0x7f08008e
 int id decor_content_parent 0x7f08008f
 int id default_activity_button 0x7f080090
+int id delete 0x7f080210
 int id deltaRelative 0x7f080091
 int id dependency_ordering 0x7f080092
 int id design_bottom_sheet 0x7f080093
@@ -3300,6 +3305,7 @@ int id easeInOut 0x7f0800aa
 int id easeOut 0x7f0800ab
 int id east 0x7f0800ac
 int id edge 0x7f0800ad
+int id edit 0x7f080212
 int id edit_query 0x7f0800ae
 int id elastic 0x7f0800af
 int id embed 0x7f0800b0

@@ -3035,9 +3035,11 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_arrow_back_black_24
+drawable ic_baseline_delete_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
+drawable ic_edit
 drawable ic_home_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -3183,6 +3185,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_classFormView_to_navigation_home
 id action_container
 id action_context_bar
 id action_divider
@@ -3192,6 +3195,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_navigation_home_to_classFormView
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3272,6 +3276,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3301,6 +3306,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id edit
 id edit_query
 id elastic
 id embed

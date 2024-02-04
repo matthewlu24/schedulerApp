@@ -1,10 +1,7 @@
 package com.example.project1team77;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-import com.example.project1team77.model.Classes;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,51 +9,21 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project1team77.databinding.ActivityMainBinding;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
-    private RecyclerView recyclerView;
-    private RecyclerViewAdapter recyclerViewAdapter;
-    ArrayList<Classes> classesModel = new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        recyclerView = findViewById(R.id.recycler_view);
-        recyclerViewAdapter = new RecyclerViewAdapter(MainActivity.this, classesModel);
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(recyclerViewAdapter);
-
-        FloatingActionButton add = findViewById(R.id.add);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //startActivity(new Intent(getApplicationContext(), ClassFormView.class));
-//                Intent newClassIntent = getIntent();
-//                String name = newClassIntent.getStringExtra("name");
-//                String time = newClassIntent.getStringExtra("time");
-//                String professor = newClassIntent.getStringExtra("professor");
-//
-//                classesModel.add(new Classes(name, time, professor));
-//
-                classesModel.add(new Classes("CS2340", "12:30PM TUE THU", "Prof. Pedro"));
-                recyclerViewAdapter.notifyDataSetChanged();
-            }
-        });
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -68,5 +35,12 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
+
+//    public void goToForm(View v){
+////        Intent intent = new Intent(MainActivity.this, ClassFormView.class);
+////        startActivity(intent);
+//
+//
+//    }
 
 }

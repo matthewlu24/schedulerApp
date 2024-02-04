@@ -7,13 +7,17 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.project1team77.ui.home.HomeFragment"
+        android:name="com.example.project1team77.ui.classes.ClassesFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_classFormView"
+            app:destination="@id/classFormView" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.project1team77.ui.dashboard.DashboardFragment"
+        android:name="com.example.project1team77.ui.assignment.AssignmentFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
@@ -28,9 +32,24 @@
         android:name="com.example.project1team77.ui.notifications.NotificationsFragment"
         android:label="Class Schedule"
         tools:layout="@layout/class_schedule" />
-    <activity
+    <fragment
         android:id="@+id/classFormView"
-        android:name="com.example.project1team77.ClassFormView"
-        android:label="ClassFormView" />
+        android:name="com.example.project1team77.ui.classes.ClassFormView"
+        android:label="Add Class"
+        tools:layout="@layout/class_form_view">
+        <action
+            android:id="@+id/action_classFormView_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="editing?"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="classStuff"
+            app:argType="string[]" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>
