@@ -3,8 +3,6 @@ package com.example.project1team77.ui.classes;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.project1team77.model.Classes;
-
 import java.util.ArrayList;
 
 public class ClassesViewModel extends ViewModel {
@@ -30,6 +28,18 @@ public class ClassesViewModel extends ViewModel {
             ArrayList<Classes> curr = classesList.getValue();
             curr.add(toAdd);
             classesList.setValue(curr);
+        }
+
+        public void removeClass(String toRemove){
+            ArrayList<Classes> curr = classesList.getValue();
+
+            for(int i = 0; i < curr.size(); i++){
+                if(curr.get(i).getClasses().equals(toRemove)){
+                    curr.remove(i);
+                    classesList.setValue(curr);
+                    return;
+                }
+            }
         }
 
 }

@@ -3035,9 +3035,11 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_arrow_back_black_24
+drawable ic_baseline_delete_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
+drawable ic_edit
 drawable ic_home_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -3274,6 +3276,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3303,6 +3306,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id edit
 id edit_query
 id elastic
 id embed

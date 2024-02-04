@@ -4,6 +4,7 @@ package com.example.project1team77.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,15 +24,24 @@ public final class ClassScheduleRowBinding implements ViewBinding {
   public final TextView classView;
 
   @NonNull
+  public final Button delete;
+
+  @NonNull
+  public final Button edit;
+
+  @NonNull
   public final TextView professorView;
 
   @NonNull
   public final TextView timeView;
 
   private ClassScheduleRowBinding(@NonNull ConstraintLayout rootView, @NonNull TextView classView,
-      @NonNull TextView professorView, @NonNull TextView timeView) {
+      @NonNull Button delete, @NonNull Button edit, @NonNull TextView professorView,
+      @NonNull TextView timeView) {
     this.rootView = rootView;
     this.classView = classView;
+    this.delete = delete;
+    this.edit = edit;
     this.professorView = professorView;
     this.timeView = timeView;
   }
@@ -69,6 +79,18 @@ public final class ClassScheduleRowBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.delete;
+      Button delete = ViewBindings.findChildViewById(rootView, id);
+      if (delete == null) {
+        break missingId;
+      }
+
+      id = R.id.edit;
+      Button edit = ViewBindings.findChildViewById(rootView, id);
+      if (edit == null) {
+        break missingId;
+      }
+
       id = R.id.professorView;
       TextView professorView = ViewBindings.findChildViewById(rootView, id);
       if (professorView == null) {
@@ -81,8 +103,8 @@ public final class ClassScheduleRowBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ClassScheduleRowBinding((ConstraintLayout) rootView, classView, professorView,
-          timeView);
+      return new ClassScheduleRowBinding((ConstraintLayout) rootView, classView, delete, edit,
+          professorView, timeView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

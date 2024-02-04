@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +17,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project1team77.R;
-import com.example.project1team77.model.Classes;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ public class ClassesFragment extends Fragment {
     private FloatingActionButton add;
     ArrayList<Classes> classesModel;
     private ClassesViewModel viewModel;
+    private Button delete;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,7 +46,8 @@ public class ClassesFragment extends Fragment {
                 recyclerViewAdapter.notifyDataSetChanged();
             }
         });
-        
+
+
         return view;
     }
 

@@ -40,6 +40,16 @@
         <action
             android:id="@+id/action_classFormView_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <argument
+            android:name="editing?"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="classStuff"
+            app:argType="string[]" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

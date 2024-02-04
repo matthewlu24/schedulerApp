@@ -15,7 +15,6 @@ import androidx.navigation.Navigation;
 
 import com.example.project1team77.R;
 import com.example.project1team77.databinding.ClassFormViewBinding;
-import com.example.project1team77.model.Classes;
 
 import java.util.ArrayList;
 
@@ -45,6 +44,16 @@ public class ClassFormView extends Fragment {
         p = (EditText) view.findViewById(R.id.professor);
 
         viewModel = new ViewModelProvider(getActivity()).get(ClassesViewModel.class);
+        classesList = viewModel.getClassesList();
+
+        Boolean editing = getArguments().getBoolean("editing?");
+
+        if(editing){
+            String[] classStuff = getArguments().getStringArray("classStuff");
+            n.setText(classStuff[0]);
+            t.setText(classStuff[1]);
+            p.setText(classStuff[2]);
+        }
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,15 +61,24 @@ public class ClassFormView extends Fragment {
                 String time = t.getText().toString();
                 String professor = p.getText().toString();
 
-                newClass = new Classes(name, time, professor);
+                if(!editing){
+                    newClass = new Classes(name, time, professor);
+                    viewModel.addClass(newClass);
+                    classesList = viewModel.getClassesList();
+                }else{
+                    int index = getArguments().getInt("index");
+                    Classes curr = classesList.get(index);
 
-                viewModel.addClass(newClass);
-
-                classesList = viewModel.getClassesList();
+                    curr.setClasses(name);
+                    curr.setTime(time);
+                    curr.setProfessor(professor);
+                }
 
                 Navigation.findNavController(v).navigate(R.id.action_classFormView_to_navigation_home);
             }
         });
+
+
 
         return view;
     }
@@ -69,15 +87,4 @@ public class ClassFormView extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
-
-//    public void submit(View v){
-//        String name = n.getText().toString();
-//        String time = t.getText().toString();
-//        String professor = p.getText().toString();
-//
-//        newClass = new Classes(name, time, professor);
-//
-//        classesList.add(newClass);
-//        viewModel.setClassesList(classesList);
-//    }
 }

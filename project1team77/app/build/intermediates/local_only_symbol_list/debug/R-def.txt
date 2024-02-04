@@ -9,7 +9,9 @@ color teal_700
 color white
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+drawable ic_baseline_delete_24
 drawable ic_dashboard_black_24dp
+drawable ic_edit
 drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -22,6 +24,8 @@ id classScheduleRecycler
 id classView
 id class_schedule
 id container
+id delete
+id edit
 id mobile_navigation
 id name
 id nav_host_fragment_activity_main
