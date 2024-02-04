@@ -12,9 +12,6 @@ public class ClassesViewModel extends ViewModel {
         public ClassesViewModel(){
             classesList.setValue(new ArrayList<Classes>());
         }
-        public MutableLiveData<ArrayList<Classes>> getLiveClassesList() {
-            return classesList;
-        }
 
         public ArrayList<Classes> getClassesList(){
             return classesList.getValue();
@@ -28,18 +25,6 @@ public class ClassesViewModel extends ViewModel {
             ArrayList<Classes> curr = classesList.getValue();
             curr.add(toAdd);
             classesList.setValue(curr);
-        }
-
-        public void removeClass(String toRemove){
-            ArrayList<Classes> curr = classesList.getValue();
-
-            for(int i = 0; i < curr.size(); i++){
-                if(curr.get(i).getClasses().equals(toRemove)){
-                    curr.remove(i);
-                    classesList.setValue(curr);
-                    return;
-                }
-            }
         }
 
 }

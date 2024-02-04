@@ -1,4 +1,4 @@
-package com.example.project1team77.model;
+package com.example.project1team77.ui.assignment;
 import com.example.project1team77.ui.classes.Classes;
 
 import java.util.Date;

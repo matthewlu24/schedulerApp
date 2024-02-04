@@ -1,6 +1,6 @@
 package com.example.project1team77.ui.classes;
 
-public class Classes {
+public class Classes implements Comparable<Classes> {
     String professor;
     String classes;
     String time;
@@ -34,5 +34,14 @@ public class Classes {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    @Override
+    public int compareTo(Classes o) {
+
+        if(o == null){
+            return 0;
+        }
+        return classes.compareTo(o.classes);
     }
 }

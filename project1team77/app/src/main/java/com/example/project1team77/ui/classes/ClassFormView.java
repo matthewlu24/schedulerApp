@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class ClassFormView extends Fragment {
 
     private Classes newClass;
-    private ClassFormViewBinding binding;
     private Button submit;
 
     private EditText n;
@@ -77,8 +76,6 @@ public class ClassFormView extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.action_classFormView_to_navigation_home);
             }
         });
-
-
 
         return view;
     }
