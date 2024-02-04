@@ -9,6 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <item name="button2" type="id"/>
+    <item name="divider" type="id"/>
+    <item name="editTextText" type="id"/>
+    <item name="listView" type="id"/>
     <string name="app_name">Scheduler App</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_home">Home</string>
