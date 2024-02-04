@@ -1,11 +1,7 @@
 package com.example.project1team77;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 
-import com.example.project1team77.model.Classes;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,47 +9,21 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project1team77.databinding.ActivityMainBinding;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
-    private RecyclerView recyclerView;
-    private RecyclerViewAdapter recyclerViewAdapter;
-    private FloatingActionButton add;
-    ArrayList<Classes> classesModel = new ArrayList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        recyclerView = findViewById(R.id.recycler_view);
-        recyclerViewAdapter = new RecyclerViewAdapter(MainActivity.this, classesModel);
-        RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(recyclerViewAdapter);
-
-        add = findViewById(R.id.add);
-
-        Intent newClassIntent = getIntent();
-        if(newClassIntent != null){
-            String name = newClassIntent.getStringExtra("name");
-            String time = newClassIntent.getStringExtra("time");
-            String professor = newClassIntent.getStringExtra("professor");
-
-            classesModel.add(new Classes(name, time, professor));
-            recyclerViewAdapter.notifyDataSetChanged();
-        }
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -66,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
-    public void goToForm(View v){
-        Intent intent = new Intent(MainActivity.this, ClassFormView.class);
-        startActivity(intent);
-    }
+//    public void goToForm(View v){
+////        Intent intent = new Intent(MainActivity.this, ClassFormView.class);
+////        startActivity(intent);
+//
+//
+//    }
 
 }

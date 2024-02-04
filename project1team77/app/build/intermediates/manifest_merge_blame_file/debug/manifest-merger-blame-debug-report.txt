@@ -63,8 +63,8 @@
 39        </activity>
 40        <activity
 40-->/Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:25:9-28:38
-41            android:name="com.example.project1team77.ClassFormView"
-41-->/Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:26:13-42
+41            android:name="com.example.project1team77.ui.classes.ClassFormView"
+41-->/Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:26:13-53
 42            android:exported="true"
 42-->/Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:28:13-36
 43            android:label="Class Form View" />

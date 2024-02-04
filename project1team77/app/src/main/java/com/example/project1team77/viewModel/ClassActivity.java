@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.project1team77.R;
 import com.example.project1team77.model.Classes;
-import com.example.project1team77.RecyclerViewAdapter;
+import com.example.project1team77.ui.classes.RecyclerViewAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;

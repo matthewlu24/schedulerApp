@@ -7,16 +7,12 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.project1team77.ui.home.HomeFragment"
+        android:name="com.example.project1team77.ui.classes.ClassesFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_navigation_home_to_classFormView"
             app:destination="@id/classFormView" />
-        <action
-            android:id="@+id/action_navigation_home_pop"
-            app:popUpTo="@id/navigation_home"
-            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -36,10 +32,14 @@
         android:name="com.example.project1team77.ui.notifications.NotificationsFragment"
         android:label="Class Schedule"
         tools:layout="@layout/class_schedule" />
-    <activity
+    <fragment
         android:id="@+id/classFormView"
-        android:name="com.example.project1team77.ClassFormView"
-        android:label="ClassFormView"
-        tools:layout="@layout/class_form_view"/>
+        android:name="com.example.project1team77.ui.classes.ClassFormView"
+        android:label="Add Class"
+        tools:layout="@layout/class_form_view">
+        <action
+            android:id="@+id/action_classFormView_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
 </navigation>

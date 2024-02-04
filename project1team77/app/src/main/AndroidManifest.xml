@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ClassFormView"
+            android:name=".ui.classes.ClassFormView"
             android:label="Class Form View"
             android:exported="true"/>
     </application>

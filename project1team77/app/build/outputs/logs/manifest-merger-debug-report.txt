@@ -130,14 +130,14 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:22:27-74
-activity#com.example.project1team77.ClassFormView
+activity#com.example.project1team77.ui.classes.ClassFormView
 ADDED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:25:9-28:38
 	android:label
 		ADDED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:27:13-44
 	android:exported
 		ADDED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:26:13-42
+		ADDED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml:26:13-53
 uses-sdk
 INJECTED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/eileenyang/Documents/GitHub/schedulerApp/project1team77/app/src/main/AndroidManifest.xml

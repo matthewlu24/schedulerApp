@@ -1,6 +1,4 @@
-package com.example.project1team77;
-
-import static android.content.Context.MODE_PRIVATE;
+package com.example.project1team77.ui.classes;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project1team77.R;
 import com.example.project1team77.model.Classes;
 
 import java.util.ArrayList;
@@ -41,6 +40,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return classesModel.size();
+    }
+
+    public void setClassesModel(ArrayList<Classes> classesModel) {
+        this.classesModel = classesModel;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

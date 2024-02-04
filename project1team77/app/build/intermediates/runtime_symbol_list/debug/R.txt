@@ -3182,6 +3182,7 @@ int id action_bar_root 0x7f080036
 int id action_bar_spinner 0x7f080037
 int id action_bar_subtitle 0x7f080038
 int id action_bar_title 0x7f080039
+int id action_classFormView_to_navigation_home 0x7f08020f
 int id action_container 0x7f08003a
 int id action_context_bar 0x7f08003b
 int id action_divider 0x7f08003c
@@ -3191,7 +3192,6 @@ int id action_menu_presenter 0x7f08003f
 int id action_mode_bar 0x7f080040
 int id action_mode_bar_stub 0x7f080041
 int id action_mode_close_button 0x7f080042
-int id action_navigation_home_pop 0x7f08020e
 int id action_navigation_home_to_classFormView 0x7f08020c
 int id action_text 0x7f080043
 int id actions 0x7f080044
