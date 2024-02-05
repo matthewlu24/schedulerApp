@@ -132,6 +132,7 @@ public class AssignmentForm extends Fragment{
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
 
+                month++;
                 dueDate.setText(month + "/" + day + "/" + year);
             }
         }, 2024, month, day);

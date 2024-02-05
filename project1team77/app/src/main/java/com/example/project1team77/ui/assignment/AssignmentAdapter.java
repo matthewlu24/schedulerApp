@@ -13,8 +13,6 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project1team77.R;
-import com.example.project1team77.ui.assignment.Assignment;
-import com.example.project1team77.ui.classes.Classes;
 
 import java.util.ArrayList;
 
@@ -90,9 +88,9 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.As
         Button edit;
         public AssignmentViewHolder(@NonNull View itemView) {
             super(itemView);
-            dueDateView = itemView.findViewById(R.id.dueDateView);
-            nameView = itemView.findViewById(R.id.nameView);
-            courseView = itemView.findViewById(R.id.courseView);
+            dueDateView = itemView.findViewById(R.id.professorView);
+            nameView = itemView.findViewById(R.id.classView);
+            courseView = itemView.findViewById(R.id.timeView);
 
             delete = itemView.findViewById(R.id.delete);
             edit = itemView.findViewById(R.id.edit);
