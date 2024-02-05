@@ -3035,11 +3035,15 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_arrow_back_black_24
+drawable ic_assignments
 drawable ic_baseline_delete_24
+drawable ic_classes
+drawable ic_classesreal
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_edit
+drawable ic_exams
 drawable ic_home_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -3053,6 +3057,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable ic_search_black_24
+drawable ic_to_do_list
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3189,6 +3194,7 @@ id action_classFormView_to_navigation_home
 id action_container
 id action_context_bar
 id action_divider
+id action_examsFormView_to_navigation_exams
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -3196,6 +3202,8 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_navigation_home_to_classFormView
+id action_navigation_home_to_examsFormView
+id action_navigation_home_to_to_do_list
 id action_text
 id actions
 id activity_chooser_view_content
@@ -3228,6 +3236,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button2
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3266,6 +3275,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id course
 id cradle
 id currentState
 id custom
@@ -3292,6 +3302,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id divider
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3301,12 +3312,14 @@ id dragRight
 id dragStart
 id dragUp
 id dropdown_menu
+id dueDate
 id easeIn
 id easeInOut
 id easeOut
 id east
 id edge
 id edit
+id editTextText
 id edit_query
 id elastic
 id embed
@@ -3314,6 +3327,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id examsFormView
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3373,8 +3387,10 @@ id line1
 id line3
 id linear
 id listMode
+id listView
 id list_item
 id locale
+id location
 id ltr
 id m3_side_sheet
 id marquee
@@ -3449,9 +3465,10 @@ id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_dashboard
+id navigation_exams
 id navigation_header_container
 id navigation_home
-id navigation_notifications
+id navigation_to_do_list
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3601,11 +3618,11 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id text_dashboard
+id text_exams
 id text_home
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_notifications
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3614,6 +3631,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id time
 id timeView
+id time_date
 id title
 id titleDividerNoCustom
 id title_template
@@ -3768,6 +3786,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout assignment_form
 layout class_form_view
 layout class_schedule
 layout class_schedule_row
@@ -3787,9 +3806,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout exams_form_view
 layout fragment_dashboard
+layout fragment_exams
 layout fragment_home
-layout fragment_notifications
+layout fragment_to_do_list
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

@@ -21,6 +21,9 @@ public final class ClassFormViewBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final EditText dueDate;
+
+  @NonNull
   public final EditText name;
 
   @NonNull
@@ -29,16 +32,13 @@ public final class ClassFormViewBinding implements ViewBinding {
   @NonNull
   public final Button submit;
 
-  @NonNull
-  public final EditText time;
-
-  private ClassFormViewBinding(@NonNull ConstraintLayout rootView, @NonNull EditText name,
-      @NonNull EditText professor, @NonNull Button submit, @NonNull EditText time) {
+  private ClassFormViewBinding(@NonNull ConstraintLayout rootView, @NonNull EditText dueDate,
+      @NonNull EditText name, @NonNull EditText professor, @NonNull Button submit) {
     this.rootView = rootView;
+    this.dueDate = dueDate;
     this.name = name;
     this.professor = professor;
     this.submit = submit;
-    this.time = time;
   }
 
   @Override
@@ -68,6 +68,12 @@ public final class ClassFormViewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.dueDate;
+      EditText dueDate = ViewBindings.findChildViewById(rootView, id);
+      if (dueDate == null) {
+        break missingId;
+      }
+
       id = R.id.name;
       EditText name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
@@ -86,13 +92,8 @@ public final class ClassFormViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.time;
-      EditText time = ViewBindings.findChildViewById(rootView, id);
-      if (time == null) {
-        break missingId;
-      }
-
-      return new ClassFormViewBinding((ConstraintLayout) rootView, name, professor, submit, time);
+      return new ClassFormViewBinding((ConstraintLayout) rootView, dueDate, name, professor,
+          submit);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
