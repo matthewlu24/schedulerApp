@@ -3178,6 +3178,7 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
+id action_assignmentForm_to_navigation_dashboard
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -3195,6 +3196,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_navigation_dashboard_to_assignmentForm
 id action_navigation_home_to_classFormView
 id action_text
 id actions
@@ -3212,6 +3214,8 @@ id antiClockwise
 id anticipate
 id arc
 id asConfigured
+id assignmentForm
+id assignmentRecycler
 id async
 id auto
 id autoComplete
@@ -3247,7 +3251,6 @@ id chronometer
 id circle_center
 id classFormView
 id classScheduleRecycler
-id classView
 id class_schedule
 id clear_text
 id clip_horizontal
@@ -3266,6 +3269,7 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id courseView
 id cradle
 id currentState
 id custom
@@ -3301,6 +3305,9 @@ id dragRight
 id dragStart
 id dragUp
 id dropdown_menu
+id dueDate
+id dueDateText
+id dueDateView
 id easeIn
 id easeInOut
 id easeOut
@@ -3438,6 +3445,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name
+id nameView
 id nav_controller_view_tag
 id nav_host_fragment_activity_main
 id nav_host_fragment_container
@@ -3499,7 +3507,6 @@ id position
 id postLayout
 id pressed
 id professor
-id professorView
 id progress_circular
 id progress_horizontal
 id radio
@@ -3535,6 +3542,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id selectClass
 id select_dialog_listview
 id selected
 id selection_type
@@ -3554,6 +3562,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id sorting
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3613,7 +3622,6 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id time
-id timeView
 id title
 id titleDividerNoCustom
 id title_template
@@ -3768,6 +3776,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout assignment_form
+layout assignment_row
 layout class_form_view
 layout class_schedule
 layout class_schedule_row
@@ -3790,6 +3800,7 @@ layout design_text_input_start_icon
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications
+layout list_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

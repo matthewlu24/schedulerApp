@@ -5,9 +5,9 @@ import java.util.Date;
 public class Assignment {
 
     private String title;
-    private Date dueDate;
+    private String dueDate;
     private Classes course;
-    public Assignment(String title, Date dueDate, Classes course) {
+    public Assignment(String title, String dueDate, Classes course) {
         this.title = title;
         this.dueDate = dueDate;
         this.course = course;
@@ -17,11 +17,23 @@ public class Assignment {
         return title;
     }
 
-    public Date getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
     public Classes getCourse() {
         return course;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public void setCourse(Classes course) {
+        this.course = course;
     }
 }

@@ -17,9 +17,13 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.project1team77.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.example.project1team77.ui.assignment.AssignmentFragment"
+        android:label="Assignments"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_assignmentForm"
+            app:destination="@id/assignmentForm" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -46,6 +50,25 @@
             android:defaultValue="false" />
         <argument
             android:name="classStuff"
+            app:argType="string[]" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignmentForm"
+        android:name="com.example.project1team77.ui.assignment.AssignmentForm"
+        android:label="Add Assignments"
+        tools:layout="@layout/assignment_form">
+        <action
+            android:id="@+id/action_assignmentForm_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <argument
+            android:name="editing?"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="assignmentStuff"
             app:argType="string[]" />
         <argument
             android:name="index"

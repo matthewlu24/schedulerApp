@@ -24,6 +24,14 @@
         "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/drawable/ic_notifications_black_24dp.xml"
     },
     {
+        "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-merged_res-44:/layout_assignment_form.xml.flat",
+        "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/layout/assignment_form.xml"
+    },
+    {
+        "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-merged_res-44:/layout_assignment_row.xml.flat",
+        "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/layout/assignment_row.xml"
+    },
+    {
         "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-merged_res-44:/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/mipmap-xhdpi/ic_launcher.webp"
     },
@@ -130,6 +138,10 @@
     {
         "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-merged_res-44:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-merged_res-44:/layout_list_item.xml.flat",
+        "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/layout/list_item.xml"
     },
     {
         "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-merged_res-44:/drawable-hdpi_ic_baseline_delete_24.png.flat",
