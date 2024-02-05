@@ -4,6 +4,7 @@ package com.example.project1team77.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.annotation.NonNull;
@@ -21,23 +22,28 @@ public final class AssignmentFormBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final EditText course;
+  public final Button dueDate;
 
   @NonNull
-  public final EditText dueDate;
+  public final EditText dueDateText;
 
   @NonNull
   public final EditText name;
 
   @NonNull
+  public final AutoCompleteTextView selectClass;
+
+  @NonNull
   public final Button submit;
 
-  private AssignmentFormBinding(@NonNull ConstraintLayout rootView, @NonNull EditText course,
-      @NonNull EditText dueDate, @NonNull EditText name, @NonNull Button submit) {
+  private AssignmentFormBinding(@NonNull ConstraintLayout rootView, @NonNull Button dueDate,
+      @NonNull EditText dueDateText, @NonNull EditText name,
+      @NonNull AutoCompleteTextView selectClass, @NonNull Button submit) {
     this.rootView = rootView;
-    this.course = course;
     this.dueDate = dueDate;
+    this.dueDateText = dueDateText;
     this.name = name;
+    this.selectClass = selectClass;
     this.submit = submit;
   }
 
@@ -68,15 +74,15 @@ public final class AssignmentFormBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.course;
-      EditText course = ViewBindings.findChildViewById(rootView, id);
-      if (course == null) {
+      id = R.id.dueDate;
+      Button dueDate = ViewBindings.findChildViewById(rootView, id);
+      if (dueDate == null) {
         break missingId;
       }
 
-      id = R.id.dueDate;
-      EditText dueDate = ViewBindings.findChildViewById(rootView, id);
-      if (dueDate == null) {
+      id = R.id.dueDateText;
+      EditText dueDateText = ViewBindings.findChildViewById(rootView, id);
+      if (dueDateText == null) {
         break missingId;
       }
 
@@ -86,13 +92,20 @@ public final class AssignmentFormBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.selectClass;
+      AutoCompleteTextView selectClass = ViewBindings.findChildViewById(rootView, id);
+      if (selectClass == null) {
+        break missingId;
+      }
+
       id = R.id.submit;
       Button submit = ViewBindings.findChildViewById(rootView, id);
       if (submit == null) {
         break missingId;
       }
 
-      return new AssignmentFormBinding((ConstraintLayout) rootView, course, dueDate, name, submit);
+      return new AssignmentFormBinding((ConstraintLayout) rootView, dueDate, dueDateText, name,
+          selectClass, submit);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

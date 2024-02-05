@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
@@ -88,9 +87,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         Button edit;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView1 = itemView.findViewById(R.id.professorView);
-            textView2 = itemView.findViewById(R.id.classView);
-            textView3 = itemView.findViewById(R.id.timeView);
+            textView1 = itemView.findViewById(R.id.dueDateView);
+            textView2 = itemView.findViewById(R.id.nameView);
+            textView3 = itemView.findViewById(R.id.courseView);
 
             delete = itemView.findViewById(R.id.delete);
             edit = itemView.findViewById(R.id.edit);

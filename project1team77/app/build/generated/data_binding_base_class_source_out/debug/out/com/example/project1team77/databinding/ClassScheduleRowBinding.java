@@ -21,29 +21,29 @@ public final class ClassScheduleRowBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView classView;
+  public final TextView courseView;
 
   @NonNull
   public final Button delete;
 
   @NonNull
+  public final TextView dueDateView;
+
+  @NonNull
   public final Button edit;
 
   @NonNull
-  public final TextView professorView;
+  public final TextView nameView;
 
-  @NonNull
-  public final TextView timeView;
-
-  private ClassScheduleRowBinding(@NonNull ConstraintLayout rootView, @NonNull TextView classView,
-      @NonNull Button delete, @NonNull Button edit, @NonNull TextView professorView,
-      @NonNull TextView timeView) {
+  private ClassScheduleRowBinding(@NonNull ConstraintLayout rootView, @NonNull TextView courseView,
+      @NonNull Button delete, @NonNull TextView dueDateView, @NonNull Button edit,
+      @NonNull TextView nameView) {
     this.rootView = rootView;
-    this.classView = classView;
+    this.courseView = courseView;
     this.delete = delete;
+    this.dueDateView = dueDateView;
     this.edit = edit;
-    this.professorView = professorView;
-    this.timeView = timeView;
+    this.nameView = nameView;
   }
 
   @Override
@@ -73,9 +73,9 @@ public final class ClassScheduleRowBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.classView;
-      TextView classView = ViewBindings.findChildViewById(rootView, id);
-      if (classView == null) {
+      id = R.id.courseView;
+      TextView courseView = ViewBindings.findChildViewById(rootView, id);
+      if (courseView == null) {
         break missingId;
       }
 
@@ -85,26 +85,26 @@ public final class ClassScheduleRowBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.dueDateView;
+      TextView dueDateView = ViewBindings.findChildViewById(rootView, id);
+      if (dueDateView == null) {
+        break missingId;
+      }
+
       id = R.id.edit;
       Button edit = ViewBindings.findChildViewById(rootView, id);
       if (edit == null) {
         break missingId;
       }
 
-      id = R.id.professorView;
-      TextView professorView = ViewBindings.findChildViewById(rootView, id);
-      if (professorView == null) {
+      id = R.id.nameView;
+      TextView nameView = ViewBindings.findChildViewById(rootView, id);
+      if (nameView == null) {
         break missingId;
       }
 
-      id = R.id.timeView;
-      TextView timeView = ViewBindings.findChildViewById(rootView, id);
-      if (timeView == null) {
-        break missingId;
-      }
-
-      return new ClassScheduleRowBinding((ConstraintLayout) rootView, classView, delete, edit,
-          professorView, timeView);
+      return new ClassScheduleRowBinding((ConstraintLayout) rootView, courseView, delete,
+          dueDateView, edit, nameView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

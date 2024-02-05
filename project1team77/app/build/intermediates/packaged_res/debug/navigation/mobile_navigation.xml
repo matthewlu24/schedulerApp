@@ -18,29 +18,29 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.project1team77.ui.assignment.AssignmentFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_exams"
-        android:name="com.example.project1team77.ui.exams.ExamsFragment"
-        android:label="Exams"
-        tools:layout="@layout/fragment_exams" > <action
-        android:id="@+id/action_navigation_home_to_examsFormView"
-        app:destination="@id/examsFormView" />
+        android:label="Assignments"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_assignmentForm"
+            app:destination="@id/assignmentForm" />
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.project1team77.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
         android:id="@+id/class_schedule"
-        android:name="com.example.project1team77.ui.exams.ExamsFragment"
+        android:name="com.example.project1team77.ui.notifications.NotificationsFragment"
         android:label="Class Schedule"
         tools:layout="@layout/class_schedule" />
     <fragment
         android:id="@+id/classFormView"
         android:name="com.example.project1team77.ui.classes.ClassFormView"
         android:label="Add Class"
-        tools:layout="@layout/class_form_view"
-        >
+        tools:layout="@layout/class_form_view">
         <action
             android:id="@+id/action_classFormView_to_navigation_home"
             app:destination="@id/navigation_home" />
@@ -55,36 +55,24 @@
             android:name="index"
             app:argType="integer" />
     </fragment>
-
     <fragment
-        android:id="@+id/examsFormView"
-        android:name="com.example.project1team77.ui.exams.ExamsFormView"
-        android:label="Add Exam"
-        tools:layout="@layout/exams_form_view"
-        >
+        android:id="@+id/assignmentForm"
+        android:name="com.example.project1team77.ui.assignment.AssignmentForm"
+        android:label="Add Assignments"
+        tools:layout="@layout/assignment_form">
         <action
-            android:id="@+id/action_examsFormView_to_navigation_exams"
-            app:destination="@id/navigation_exams" />
+            android:id="@+id/action_assignmentForm_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
         <argument
             android:name="editing?"
             app:argType="boolean"
             android:defaultValue="false" />
         <argument
-            android:name="classStuff"
+            android:name="assignmentStuff"
             app:argType="string[]" />
         <argument
             android:name="index"
             app:argType="integer" />
     </fragment>
-
-    <fragment
-        android:id="@+id/navigation_to_do_list"
-        android:name="com.example.project1team77.ui.todolist.ToDoListFragment"
-        android:label="To-Do List"
-        tools:layout="@layout/fragment_to_do_list" > <action
-        android:id="@+id/action_navigation_home_to_to_do_list"
-        app:destination="@id/examsFormView" />
-    </fragment>
-
 
 </navigation>

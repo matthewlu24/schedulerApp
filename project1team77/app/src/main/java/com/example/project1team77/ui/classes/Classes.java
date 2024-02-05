@@ -44,4 +44,10 @@ public class Classes implements Comparable<Classes> {
         }
         return classes.compareTo(o.classes);
     }
+
+    @Override
+    public String toString(){
+        return classes;
+    }
+
 }

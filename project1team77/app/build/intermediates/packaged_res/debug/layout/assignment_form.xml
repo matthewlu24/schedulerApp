@@ -25,24 +25,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Name"
+            android:hint="Assignment Name"
             android:inputType="text" />
 
-        <EditText
-            android:id="@+id/dueDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Time"
-            android:inputType="text" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
 
-        <EditText
-            android:id="@+id/course"
-            android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/dueDateText"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="MM/DD/YYYY"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/dueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Professor"
-            android:inputType="text" />
+            android:hint="Course">
+
+            <AutoCompleteTextView
+                android:id="@+id/selectClass"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/submit"
