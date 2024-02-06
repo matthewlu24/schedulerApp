@@ -113,6 +113,14 @@ public class AssignmentForm extends Fragment{
         return view;
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ArrayAdapter<Classes> adapterItems = new ArrayAdapter<Classes>(getActivity(), R.layout.list_item, toArray());
+        selectClass.setAdapter(adapterItems);
+    }
+
     private Classes[] toArray(){
 
         Classes[] toReturn = new Classes[classesList.size()];
