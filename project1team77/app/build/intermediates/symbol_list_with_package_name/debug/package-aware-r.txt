@@ -3576,7 +3576,8 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
-id sorting
+id sortByClass
+id sortByDate
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3881,6 +3882,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu bottom_nav_menu
+menu sorting
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation

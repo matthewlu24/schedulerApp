@@ -2,6 +2,9 @@ package com.example.project1team77.ui.assignment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -32,7 +35,6 @@ public class AssignmentFragment extends Fragment {
     private FloatingActionButton add;
     private AssignmentAdapter assignmentAdapter;
     private RecyclerView recyclerView;
-    private AutoCompleteTextView sorting;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,22 +55,8 @@ public class AssignmentFragment extends Fragment {
 
         String[] sortView = {"By Date", "By Class"};
         ArrayAdapter<String> adapterItems = new ArrayAdapter<String>(getActivity(), R.layout.list_item, sortView);
-        sorting = view.findViewById(R.id.sorting);
-        sorting.setAdapter(adapterItems);
 
-        sorting.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                if(position == 0){
-                    viewModel.sortDueDate();
-                    assignmentAdapter.notifyDataSetChanged();
-                }else if(position == 1){
-                    viewModel.sortCourse();
-                    assignmentAdapter.notifyDataSetChanged();
-                }
-            }
-        });
+        setHasOptionsMenu(true);
 
         return view;
     }
@@ -91,4 +79,25 @@ public class AssignmentFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.sorting, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+            if(item.getItemId() == R.id.sortByDate)  {
+                viewModel.sortDueDate();
+                assignmentAdapter.notifyDataSetChanged();
+                return true;
+            }else if(item.getItemId() == R.id.sortByClass) {
+                viewModel.sortCourse();
+                assignmentAdapter.notifyDataSetChanged();
+                return true;
+            }
+        return false;
+    }
+
 }

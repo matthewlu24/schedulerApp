@@ -58,7 +58,8 @@ id professor
 id professorView
 id recycler_view
 id selectClass
-id sorting
+id sortByClass
+id sortByDate
 id submit
 id text_dashboard
 id text_exams
@@ -78,6 +79,7 @@ layout fragment_home
 layout fragment_to_do_list
 layout list_item
 menu bottom_nav_menu
+menu sorting
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation

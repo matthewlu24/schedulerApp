@@ -4,7 +4,6 @@ package com.example.project1team77.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,18 +28,14 @@ public final class FragmentDashboardBinding implements ViewBinding {
   public final RecyclerView assignmentRecycler;
 
   @NonNull
-  public final AutoCompleteTextView sorting;
-
-  @NonNull
   public final TextView textDashboard;
 
   private FragmentDashboardBinding(@NonNull ConstraintLayout rootView,
       @NonNull FloatingActionButton add, @NonNull RecyclerView assignmentRecycler,
-      @NonNull AutoCompleteTextView sorting, @NonNull TextView textDashboard) {
+      @NonNull TextView textDashboard) {
     this.rootView = rootView;
     this.add = add;
     this.assignmentRecycler = assignmentRecycler;
-    this.sorting = sorting;
     this.textDashboard = textDashboard;
   }
 
@@ -83,12 +78,6 @@ public final class FragmentDashboardBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.sorting;
-      AutoCompleteTextView sorting = ViewBindings.findChildViewById(rootView, id);
-      if (sorting == null) {
-        break missingId;
-      }
-
       id = R.id.text_dashboard;
       TextView textDashboard = ViewBindings.findChildViewById(rootView, id);
       if (textDashboard == null) {
@@ -96,7 +85,7 @@ public final class FragmentDashboardBinding implements ViewBinding {
       }
 
       return new FragmentDashboardBinding((ConstraintLayout) rootView, add, assignmentRecycler,
-          sorting, textDashboard);
+          textDashboard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

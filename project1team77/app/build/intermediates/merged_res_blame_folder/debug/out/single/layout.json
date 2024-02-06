@@ -36,16 +36,12 @@
         "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.project1team77.app-mergeDebugResources-43:/layout/class_schedule_row.xml",
-        "source": "com.example.project1team77.app-main-46:/layout/class_schedule_row.xml"
-    },
-    {
-        "merged": "com.example.project1team77.app-mergeDebugResources-43:/layout/assignment_row.xml",
-        "source": "com.example.project1team77.app-main-46:/layout/assignment_row.xml"
-    },
-    {
         "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-mergeDebugResources-43:/layout/assignment_row.xml",
         "source": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-main-46:/layout/assignment_row.xml"
+    },
+    {
+        "merged": "com.example.project1team77.app-mergeDebugResources-43:/layout/fragment_dashboard.xml",
+        "source": "com.example.project1team77.app-main-46:/layout/fragment_dashboard.xml"
     },
     {
         "merged": "/Users/eileenyang/.gradle/daemon/8.2/com.example.project1team77.app-mergeDebugResources-43:/layout/list_item.xml",
